@@ -1,0 +1,10 @@
+services:
+  - type: cron
+    name: trading-bias-alert
+    runtime: python
+    schedule: "*/15 * * * *"
+    buildCommand: ""
+    startCommand: "python main.py"
+    envVars:
+      - key: WEBHOOK_URL
+        value: "https://api.telegram.org/bot<YOUR_TOKEN>/sendMessage?chat_id=<YOUR_CHAT_ID>&text="
