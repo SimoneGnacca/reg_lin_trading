@@ -1,10 +1,10 @@
 services:
   - type: cron
-    name: trading-bias-alert
+    name: nas100-bias-job
     runtime: python
-    schedule: "*/15 * * * *"
+    schedule: "*/15 * * * *"  # ogni 15 minuti
     buildCommand: ""
-    startCommand: "python main.py"
+    startCommand: python main.py
     envVars:
-      - key: WEBHOOK_URL
-        value: "https://api.telegram.org/bot<YOUR_TOKEN>/sendMessage?chat_id=<YOUR_CHAT_ID>&text="
+      - key: PYTHON_VERSION
+        value: 3.10
