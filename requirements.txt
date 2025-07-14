@@ -1,5 +1,4 @@
-
-pandas
-numpy
+tradingview_ta
 xgboost
+pandas
 scikit-learn
